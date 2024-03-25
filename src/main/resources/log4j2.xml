@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+  <Appenders>
+    <File name="mainFile" fileName="/tmp/ad-client.log">
+      <PatternLayout>
+        <Pattern>%d{HH:mm:ss.SSS} %-5level %logger - %msg%n</Pattern>
+      </PatternLayout>
+    </File>
+    <Console name="console" target="SYSTEM_OUT">
+      <PatternLayout>
+        <pattern>%d{HH:mm:ss.SSS} %-5level %logger - %msg%n</pattern>
+      </PatternLayout>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="DEBUG">
+      <appender-ref ref="mainFile"/>
+      <appender-ref ref="console"/>
+    </Root>
+  </Loggers>
+</Configuration>
